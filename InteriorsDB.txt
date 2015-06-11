@@ -1,0 +1,59 @@
+USE [Interiors]
+GO
+/****** Object:  Table [dbo].[Configuration]    Script Date: 11/06/2015 1:36:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Configuration](
+	[ConfgID] [int] NULL,
+	[ConfigCode] [varchar](10) NULL,
+	[ConfigGroup] [varchar](50) NULL,
+	[ConfigDescription] [nvarchar](500) NULL,
+	[ConfigValue] [int] NULL,
+	[ConfigData] [ntext] NULL,
+	[Image] [varchar](100) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[News]    Script Date: 11/06/2015 1:36:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[News](
+	[nID] [int] NULL,
+	[nTitle] [nvarchar](500) NULL,
+	[nImage] [nvarchar](250) NULL,
+	[nDescription] [nvarchar](500) NULL,
+	[nContent] [ntext] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 11/06/2015 1:36:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Product](
+	[prID] [int] NULL,
+	[Image] [varchar](10) NULL,
+	[prName] [varchar](250) NULL,
+	[prDescription] [nvarchar](max) NULL,
+	[prWoodgrain] [nvarchar](max) NULL,
+	[prApplication] [nvarchar](max) NULL,
+	[prGallery] [nvarchar](max) NULL,
+	[prCatalogue] [nvarchar](max) NULL,
+	[prGroup] [nvarchar](max) NULL,
+	[prNote] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
